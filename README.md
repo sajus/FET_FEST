@@ -3,7 +3,7 @@
 
 The TECHTONIC FET fest will begin on **May 27, 2019** and will conclude with a highly competitive hackathon on **June 15, 2019**.
 
-This event is a Cybage hosted organization wide event and will be conducted in three locations; **Pune, Gandhinagar and Hyderabad**
+This event is a XXXXX hosted organization wide event and will be conducted in three locations; **Pune, Gandhinagar and Hyderabad**
 
 The last date for applying for the hackathon is **June 10, 2019** Registration must be completed through the event website.
 
@@ -108,7 +108,7 @@ The judges will evaluate all eligible submissions on the following criteria:
 
 ### Small little tit-bits
 *  Any disputes arising out of or in relation with the Hackathon shall be settled amicably
-*  Questions with respect to the Hackathon can be directed to the appropriate location contact: techtonic@cybage.com
+*  Questions with respect to the Hackathon can be directed to the appropriate location contact: techtonic@XXXXX.com
 
 
 # CODE SETUP
@@ -136,6 +136,6 @@ Where **<PROJECT_NAME>** will be short name of your project/theme.
 
 
 ### Disclaimer
-Cybage is just a facilitator of such events and will not hold any responsibility or accountability of any incident/accident/mis happening/IP or copyright infringement.
+XXXXX is just a facilitator of such events and will not hold any responsibility or accountability of any incident/accident/mis happening/IP or copyright infringement.
 
 **The attendance to the event will be at your own discretion.**
