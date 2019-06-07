@@ -117,7 +117,7 @@ The judges will evaluate all eligible submissions on the following criteria:
 
 Team leader need to fork this repository, for more help please visit (**https://help.github.com/en/articles/fork-a-repo**) Rest of the team member can contribute to the forked repository.
 
-* **Don't commit any code in master repo, it will be not approved. Only commit the code in forked repository **
+* **Don't commit any code in master repo, it will be not approved. Only commit the code in forked repository**
 * **You can create multiple fork repository, and PULL request to common fork repository for review**
 * **Only one repository will be considered for code review from the panel, multiple repository/branch will not be considered**
 
