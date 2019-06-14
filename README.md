@@ -1,27 +1,23 @@
 # BeingCitizen
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+Education is a gift for life. This platform will help children to unlock their potential and realise their dreams. Every child is extraordinary and can scale great heights if provided with the right learning opportunities. With help of this platform we connect those child with donar.
 
-## Development server
+With complete transparency, every school can register on this platform and only school can add the list of child who needs actual help. Hence donor will have access to all the child who requires actual need.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Primary item which donar can donates are:
+    *   Uniforms
+    *   Stationary
+    *   Book
 
-## Code scaffolding
+Platform is based to smooth and hasel free procees:
+## 1. School Registration
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+School will regrister on this platform by providing all necessary details.
 
-## Build
+## 2. Adding students list 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+School will add list of students who requires actual help. List will have all necessary information about student
 
-## Running unit tests
+## 3. Easy Donation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Once school add the list of student, donar can easily find the list and make donation accordingly
