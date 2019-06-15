@@ -1,3 +1,50 @@
-<p>
-  spas-booking works!
-</p>
+
+<h3>Enter Booking Details</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">NearBy Area: </div>
+    <input type="text" class="col-md-4" [(ngModel)]="bookingData.area">
+  </div>
+  <div class="row">
+    <div class="col-md-4">Parking Location: </div>
+    <input type="text" class="col-md-4" [(ngModel)]="bookingData.parkingName">
+  </div>
+  <div class="row">
+    <div class="col-md-4">user name: </div>
+    <input type="text" class="col-md-4" [(ngModel)]="bookingData.username">
+  </div>
+  <div class="row">
+    <div class="col-md-4">contact number: </div>
+    <input type="text" class="col-md-4" [(ngModel)]="bookingData.contact">
+  </div>
+  <div class="row">
+    <div class="col-md-4">vehicle number: </div>
+    <input type="text" class="col-md-4" [(ngModel)]="bookingData.vehicleNumber">
+  </div>
+  <div class="row">
+    <div class="col-md-4">Start Time: </div>
+    <input type="text" class="col-md-4" [(ngModel)]="bookingData.startTime">
+  </div>
+  <div class="row">
+    <div class="col-md-4">End Time: </div>
+    <input type="text" class="col-md-4" [(ngModel)]="bookingData.endTime">
+  </div>
+  <div class="row">
+    <div class="col-md-4">Slot Booked: </div>
+    <input type="text" class="col-md-4" [(ngModel)]="bookingData.slotNumber" readonly>
+  </div>
+  <div class="row">
+    <div class="col-md-4">Charged Amount: </div>
+    <input type="text" class="col-md-4" [(ngModel)]="bookingData.amount">
+  </div>
+
+  <div class="row">
+    <div class="col-md-5">
+      <button type="button" (click)="payNProceed()"> Pay and Proceed</button>
+    </div>
+    <div class="col-md-5">
+      <button type="button" (click)="cancle()">Cancle</button>
+    </div>
+  </div>
+
+</div>
