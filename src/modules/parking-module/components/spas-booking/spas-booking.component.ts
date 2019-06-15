@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { BookingData } from 'src/modules/parking-module/models/spas-booking-data';
 import { SpasDataService } from 'src/modules/parking-module/services/spas-data.service';
+import { Router } from '@angular/router';
+import { BookingData } from 'src/modules/parking-module/models/spas-booking-data';
 
 @Component({
   selector: 'spas-booking',
@@ -12,7 +13,8 @@ export class SpasBookingComponent implements OnInit {
   bookingData: BookingData;
 
   constructor(
-    private spasDataService: SpasDataService
+    private spasDataService: SpasDataService,
+    private router: Router
   ) {
 
     // should be input - user selection
@@ -51,5 +53,7 @@ export class SpasBookingComponent implements OnInit {
       vehicleNo: this.bookingData.vehicleNo
     }
     this.spasDataService.storeCurrentBookingData(this.bookingData);
+
+    this.router.navigate(['spas/bookingConfirmation']);
   }
 }

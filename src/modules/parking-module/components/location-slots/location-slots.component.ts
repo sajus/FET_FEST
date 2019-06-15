@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-location-slots',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocationSlotsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  onSlotConfirmation() {
+    this.router.navigate(['spas/slotConfirmation']);
   }
 
 }

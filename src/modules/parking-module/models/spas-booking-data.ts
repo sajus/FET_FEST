@@ -18,7 +18,7 @@ export class BookingData {
     status?: string;
     slotNumber?: string;
 
-    constructor(data?: BookingData) {
+    constructor(data?: any) {
         this.area = data.area ? data.area : '';
         this.parkingName = data.parkingName ? data.parkingName : '';
         this.username = data.username ? data.username : '';
