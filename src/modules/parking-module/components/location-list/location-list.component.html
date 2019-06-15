@@ -1,0 +1,19 @@
+<div class="container-fluid available-locations-container">
+  <div class="row m-0 available-locations-header">
+      <div>
+          <img src="../../../../assets/img/circled-left-arrow.png">
+          <h5>Available Locations</h5>
+      </div>
+  </div>
+  <hr>
+  <div class="available-locations-body">
+      <div class="btn-grp row">
+          <ng-container *ngFor="let location of locationList; index as i;" >
+                <button (click)="viewLocationSlots(location)"  type="button" class="btn btn-light col-6">
+                        <span >{{location.name}}</span>
+                      </button>
+          </ng-container>
+          
+      </div>
+  </div>
+</div>
