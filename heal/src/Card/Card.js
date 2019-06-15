@@ -2,24 +2,28 @@ import React, { Component } from 'react';
 import './Card.css';
 
 class Card extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      "symptoms": props.symptoms,
+    };
+  }
 
   render() {
-    const sympObjLoop = new Array(this.props.symptoms).map((value, key) => {
+    const sympObjLoop = new Array(this.props.symptoms).map((item, index) => {
       return (
-        <div class="row">
-          <div class="col s12 m12" key={key}>
-            <div class="card blue-grey darken-1">
-              <div class="card-content white-text">
-                <span class="card-title diseaseTitle">{this.props.disease}</span>
-                <div>
-                  {
-                    Object.keys(value).map((val, k) => {
-                      return (<span k={k}>{val}</span>)
-                    })
-                  }
-                </div>
-              </div>
-            </div>
+        <div className="card-content" key={index}>
+          <span className="card-title disease-title">{this.props.disease}</span>
+          <div className="symptom-list">
+            {Object.keys(this.state.symptoms).map((item, index) => {
+              return (
+                <span key={index} className={"symptom " + (this.state.symptoms[item] ? 'selected' : 'unselected')}>
+                  <i className="material-icons">check_circle_outline</i>
+                  <span className="symptom-value">{item}</span>
+                </span>
+              )
+            })}
           </div>
         </div>
       )
@@ -27,7 +31,7 @@ class Card extends Component {
 
 
     return (
-      <div className="centerAlign">
+      <div>
         {sympObjLoop}
       </div>
     );

@@ -1,20 +1,44 @@
-.cardContainer {
-  border: 1px solid black;
-  width: '80%';
-  height: 'auto';
-  margin: 20px;
-  background-color: 'light-gray';
-  border-radius: 5px;
-  box-shadow: 5px;
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+.row {
+  display: flex;
 }
 
-.centerAlign {
-  align-content: center
+.card {
+  margin: 0 auto;
 }
 
-.diseaseTitle {
-  font-weight: bold !important;
+.disease-title {
+  color: #444;
+}
+
+.material-icons {
+  font-size: 2rem;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+span {
+  font-size: 1rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.symptom {
+  padding: 5px 5px 5px 0;
+  margin: 5px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 50px;
+}
+
+i, .symptom-value {
+  margin: 0 2px;
+}
+
+.selected {
+  background: #baddfa;
+}
+
+.unselected {
+  background: #ddd;
 }
