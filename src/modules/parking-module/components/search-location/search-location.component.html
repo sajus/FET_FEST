@@ -21,7 +21,7 @@
       </div>
       <div class="form-group">
           <label for="duration" class="duration">End Time
-              <input type="time" [ngClass]="{ 'has-error': isSubmitted && formControls.endTime.errors }" class="form-control" formControlName="endTime" id="duration" placeholder="Please enter duration">
+              <input type="number" [ngClass]="{ 'has-error': isSubmitted && formControls.endTime.errors }" class="form-control" formControlName="endTime" id="duration" placeholder="Please enter duration">
           </label>
       </div>
       <button type="sumit" class="btn btn-light my-bookings-btn">Check Available Locations</button>
