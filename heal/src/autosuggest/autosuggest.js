@@ -38,7 +38,7 @@ class Autosuggest extends Component {
  }
 
  suggestionSelected (selectedVal){
-   this.setState(() => ({text:selectedVal, suggestions: [],}))
+   this.setState(() => ({selectText:selectedVal, suggestions: [],}))
  }
 
 
