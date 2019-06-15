@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { createTranslateLoader } from 'src/app/app.module';
 import { SpasBookingComponent } from './components/spas-booking/spas-booking.component';
 import { SpasDataService } from 'src/modules/parking-module/services/spas-data.service';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -20,18 +21,19 @@ import { SpasDataService } from 'src/modules/parking-module/services/spas-data.s
     FormsModule,
     SpasRouting,
     TranslateModule.forRoot({
-        loader: {
-            provide: TranslateLoader,
-            useFactory: (createTranslateLoader),
-            deps: [HttpClient]
-        }
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
     })
   ],
   exports: [
     SpasComponent
   ],
   providers: [
-    SpasDataService
+    SpasDataService,
+    AngularFirestore
   ],
   bootstrap: [SpasComponent]
 })
