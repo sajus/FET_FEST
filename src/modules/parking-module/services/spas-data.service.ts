@@ -16,4 +16,12 @@ export class SpasDataService {
     storeCurrentBookingData(bookingData: BookingData) {
         this.bookingDetails = bookingData;
     }
+
+    /**
+     * Returns lastly booked details of user
+     * @memberOf SpasDataService
+     */
+    getBookingData() {
+        return this.bookingDetails;
+    }
 }

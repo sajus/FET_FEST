@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SpasDataService } from 'src/modules/parking-module/services/spas-data.service';
 
 @Component({
   selector: 'spas-booking-summary',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpasBookingSummaryComponent implements OnInit {
 
-  constructor() { }
+  bookingSummary: any;
+
+  constructor(private spasDataService: SpasDataService) {
+    this.bookingSummary = spasDataService.getBookingData();
+    this.bookingSummary.status = 'Booked';
+  }
 
   ngOnInit() {
+
   }
 
 }

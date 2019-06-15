@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { BookingDetails } from 'src/modules/parking-module/models/spas-booking-data';
 
 @Injectable({
   providedIn: 'root'
