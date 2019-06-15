@@ -6,11 +6,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material-module';
+
+// Pages
 import { AppComponent } from './app.component';
+
+// Components
+import { HeaderComponent } from './components/header';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

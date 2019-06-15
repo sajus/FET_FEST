@@ -1,0 +1,39 @@
+.header-component-container {
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+  
+  
+  .header {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+    }
+    
+    .home-icon {
+      cursor: pointer;
+      float: left;
+      position: fixed;
+    }
+    
+    .home-user-profile {
+      position: fixed;
+      right: 2%;
+      cursor: pointer;
+    }
+    
+    .nav-container {
+      height: 50em;
+    }
+    
+    mat-sidenav.mat-drawer.mat-sidenav.ng-tns-c6-0.ng-trigger.ng-trigger-transform.mat-drawer-over.ng-star-inserted {
+      width: 18em;
+    }
+    
+    .profile-menu {
+      margin-top: 1em !important;
+    }
