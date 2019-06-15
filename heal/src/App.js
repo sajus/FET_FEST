@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import Disease from './components/Disease';
+import CardContainer from './Card/CardContainer';
 
 function App() {
   return (
     <div className="App">
-      <Disease />
+      <CardContainer />
     </div>
   );
 }

@@ -1,18 +1,3 @@
-span {
-  font-size: 1rem;
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.selected {
-  background: #baddfa;
-  padding: 5px;
-  margin: 5px;
-}
-
-.unselected {
-  background: #bbbbbb;
-  padding: 5px;
-  margin: 5px;
+body {
+  font-family: 'Roboto', sans-serif;
 }

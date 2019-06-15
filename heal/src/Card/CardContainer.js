@@ -1,7 +1,7 @@
 import React from 'react';
-import Symptoms from './Symptoms';
+import Card from './Card';
 
-class Disease extends React.Component {
+class CardContainer extends React.Component {
   constructor(props) {
     super(props);
 
@@ -25,25 +25,25 @@ class Disease extends React.Component {
           }
         }
 
-        this.setState({"disease": disease});
+        this.setState({ "disease": disease });
       });
   }
 
   render() {
     return (
-      <div className="disease">
-        <h2>
-          {this.state.disease.map((item, index) => {
-            return (
-              <div key={index}>
-                <Symptoms key={item.id} disease={item['disease']} symptoms={item['symptoms']} />
+      <div className="card-container">
+        {this.state.disease.map((item, index) => {
+          return (
+            <div className="row" key={index}>
+              <div className="col s12 m10 card">
+                <Card key={item.id} disease={item['disease']} symptoms={item['symptoms']} />
               </div>
-            );
-          })}
-        </h2>
+            </div>
+          );
+        })}
       </div>
-    );
+    )
   }
 }
 
-export default Disease;
+export default CardContainer;
