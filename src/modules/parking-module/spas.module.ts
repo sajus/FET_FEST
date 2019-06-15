@@ -7,10 +7,13 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { createTranslateLoader } from 'src/app/app.module';
+import { SpasBookingComponent } from './components/spas-booking/spas-booking.component';
+import { SpasDataService } from 'src/modules/parking-module/services/spas-data.service';
 
 @NgModule({
   declarations: [
-    SpasComponent
+    SpasComponent,
+    SpasBookingComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +30,9 @@ import { createTranslateLoader } from 'src/app/app.module';
   exports: [
     SpasComponent
   ],
-  providers: [],
+  providers: [
+    SpasDataService
+  ],
   bootstrap: [SpasComponent]
 })
 export class SpasModule { }
