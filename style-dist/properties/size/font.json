@@ -14,7 +14,7 @@
         "comment": "the large size of the font"
       },
       "base"  : {
-        "value": "{size.font.medium.value}",
+        "value": "1",
         "comment": "the base size of the font"
       }
     }
