@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -47,9 +46,9 @@ export class ParkingService {
       contact: bookingDetail.userContact,
       row: bookingDetail.row,
       column: bookingDetail.column,
-      startTIme: bookingDetail.startTime,
+      startTime: bookingDetail.startTime,
       endTime: bookingDetail.endTime,
-      status: bookingDetail.status,
+      status: 'B',
       paymentStatus: 'P',
       amount: bookingDetail.amount,
       vehicleNo: bookingDetail.vehicleNo
@@ -67,11 +66,24 @@ export class ParkingService {
             this.parkings
               .doc(bookingDetail.parkingId)
               .set({
-                available: available - 1
+                available: available - 1,
+                booked: [`${bookingDetail.row}${bookingDetail.column}`]
               }, { merge: true }).
               then(() => {
+                // this.parkings.doc(bookingDetail.parkingId)
+                //   .collection('booked')
+                //   .doc(`${bookingDetail.parkingId}${slotDetail.row}${slotDetail.column}`)
+                //   .set({
+                //     'booked': true
+                //   });
                 console.log('Booked successfully');
               });
+          });
+
+        this.users.doc(bookingDetail.userId)
+          .set({
+            userId: bookingDetail.userId,
+            bookedSlot: `${bookingDetail.parkingId}${slotDetail.row}${slotDetail.column}`
           });
       });
   }
@@ -92,7 +104,7 @@ export class ParkingService {
    * @param row 
    * @param column 
    */
-  checkOut(parkingId, row, column) {
+  checkOut(parkingId, userId, row, column) {
     this.bookings
       .doc(`${parkingId}${row}${column}`)
       .delete()
@@ -109,9 +121,37 @@ export class ParkingService {
                 available: available + 1
               }, { merge: true }).
               then(() => {
+                // this.parkings.doc(parkingId)
+                //   .collection('booked')
+                //   .doc(`${parkingId}${row}${column}`)
+                //   .delete();
                 console.log("Checked out Successfully");
               });
           });
+        this.users.doc(userId).delete();
       });
   }
+
+  /**
+   * Books a parking slot
+   * @param bookingDetail
+   */
+  checkInParkingSlot(parkingId, row, column) {
+    this.bookings
+      .doc(`${parkingId}${row}${column}`)
+      .set({
+        status: 'P'
+      }, { merge: true })
+      .then(() => {
+        console.log('Checked In successfully');
+      });
+  }
+
+  // getBookedSlots(parkingId) {
+  //   this.fireStore.collection('booked').get().subscribe((data) => {
+  //     data.map(d => {
+  //       console.log('d', d);
+  //     });
+  //   });
+  // }
 }

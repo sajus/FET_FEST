@@ -10,4 +10,4 @@ interface BookingDetails {
     paymentStatus: string;
     amount: string;
     vehicleNo: string;
-};
+}
