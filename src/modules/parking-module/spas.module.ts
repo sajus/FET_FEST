@@ -20,6 +20,7 @@ import { LocationListComponent } from './components/location-list/location-list.
 import { LocationSlotsComponent } from './components/location-slots/location-slots.component';
 import { SpasDataService } from 'src/modules/parking-module/services/spas-data.service';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { SpasBookingSummaryComponent } from './components/spas-booking-summary/spas-booking-summary.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
     SpasBookingComponent,
     SearchLocationComponent,
     LocationListComponent,
-    LocationSlotsComponent
+    LocationSlotsComponent,
+    SpasBookingSummaryComponent
   ],
   imports: [
     CommonModule,

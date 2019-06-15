@@ -52,13 +52,13 @@
         background: dimgray;
         padding: 30px;
         .slot {
-          background: rgba(152, 214, 245, 0.73);
+          background: $blue;
           border: 1px dashed rgba(86, 61, 124, 0.2);
           min-height: 50px;
           transform: skew(0deg);
           padding: 0;
           div {
-            background: rgba(152, 214, 245, 0.73);
+            background: $blue;
             min-height: 50px;
             width: 100%;
             border: 2px dashed white;
@@ -70,6 +70,15 @@
               border-top:2px dashed white;
             }
           }
+        }
+        .parked {
+          background: $red !important;
+        }
+        .available {
+          background: $blue !important;
+        }
+        .selected {
+          background: $green !important;
         }
       }
       .select-location-btn {

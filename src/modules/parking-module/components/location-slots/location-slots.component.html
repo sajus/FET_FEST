@@ -10,22 +10,22 @@
             <p>Parked</p>
         </div>
         <div class="col-3">
-            <div class="circle-green">&nbsp;</div>
+            <div class="circle-blue">&nbsp;</div>
             <p>Available</p>
         </div>
         <div class="col-3">
-            <div class="circle-blue">&nbsp;</div>
+            <div class="circle-green">&nbsp;</div>
             <p>Selected</p>
         </div>
     </div>
     <div class="select-slot-body">
         <div class="row m-0 parking-block">
             <div class="col-2 slot">
+                <div class="parked"></div>
                 <div></div>
                 <div></div>
                 <div></div>
-                <div></div>
-                <div></div>
+                <div class="parked"></div>
                 <div></div>
             </div>
             <div class="col-2 road">
@@ -50,14 +50,14 @@
                 <div></div>
                 <div></div>
                 <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div class="parked"></div>
+                <div class="parked"></div>
+                <div class="parked"></div>
             </div>
             <div class="col-2 slot">
                 <div></div>
-                <div></div>
-                <div></div>
+                <div class="parked"></div>
+                <div class="parked"></div>
                 <div></div>
                 <div></div>
                 <div></div>
@@ -82,13 +82,13 @@
             </div>
             <div class="col-2 slot">
                 <div></div>
+                <div class="parked"></div>
+                <div class="parked"></div>
                 <div></div>
                 <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div class="parked"></div>
             </div>
         </div>
-        <button type="button" class="btn btn-light select-location-btn">Confirm</button>
+        <button type="button" class="btn btn-light select-location-btn" (click)="onSlotConfirmation()">Confirm</button>
     </div>
 </div>
