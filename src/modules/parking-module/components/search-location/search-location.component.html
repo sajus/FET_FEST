@@ -1,0 +1,30 @@
+<div class="container-fluid where-to-container">
+  <div class="row m-0 where-to-header">
+      <button type="button" class="btn btn-light float-right my-bookings-btn">My Bookings</button>
+      <div>
+          <img src="../../assets/img/circled-left-arrow.png">
+          <h5>Enter Location</h5>
+      </div>
+  </div>
+  <hr>
+  <form [formGroup]="searchForm" class="login-container" (ngSubmit)="searchLocation()">
+  <div class="where-to-body">
+      <div class="form-group">
+          <label for="Location" class="location">Location
+              <input type="text" class="form-control" id="Location" placeholder="Where you want to park your car?">
+          </label>
+      </div>
+      <div class="form-group">
+          <label for="start-time" class="start-time">Start-Time
+              <input type="time" class="form-control" id="start-time" placeholder="Please enter start time">
+          </label>
+      </div>
+      <div class="form-group">
+          <label for="duration" class="duration">Duration
+              <input type="time" class="form-control" id="duration" placeholder="Please enter duration">
+          </label>
+      </div>
+      <button type="button" class="btn btn-light my-bookings-btn">Check Available Locations</button>
+  </div>
+  </form>
+</div>
