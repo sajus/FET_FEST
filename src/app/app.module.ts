@@ -10,8 +10,8 @@ import { AngularFirestoreModule, AngularFirestore } from '@angular/fire/firestor
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { routing } from 'src/app/app.routing';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -23,8 +23,8 @@ export function createTranslateLoader(http: HttpClient) {
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule,
         HttpClientModule,
+        routing,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,

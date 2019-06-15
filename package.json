@@ -8,7 +8,7 @@
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "compodoc": "./node_modules/.bin/compodoc -p tsconfig.jon"
+        "compodoc": "./node_modules/.bin/compodoc -p tsconfig.json"
     },
     "private": true,
     "engines": {
@@ -59,5 +59,6 @@
         "ts-node": "7.0.0",
         "tslint": "5.11.0",
         "typescript": "3.2.2",
-        "@compodoc/compodoc": "1.0.5"    }
+        "@compodoc/compodoc": "1.0.5"
+    }
 }
