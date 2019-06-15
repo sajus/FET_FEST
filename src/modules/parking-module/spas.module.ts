@@ -15,10 +15,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
  */
 import { createTranslateLoader } from 'src/app/app.module';
 import { SpasBookingComponent } from './components/spas-booking/spas-booking.component';
-import { SpasDataService } from './services/spas-data.service';
 import { SearchLocationComponent } from './components/search-location/search-location.component';
 import { LocationListComponent } from './components/location-list/location-list.component';
 import { LocationSlotsComponent } from './components/location-slots/location-slots.component';
+import { SpasDataService } from 'src/modules/parking-module/services/spas-data.service';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -34,18 +35,19 @@ import { LocationSlotsComponent } from './components/location-slots/location-slo
     ReactiveFormsModule,
     SpasRouting,
     TranslateModule.forRoot({
-        loader: {
-            provide: TranslateLoader,
-            useFactory: (createTranslateLoader),
-            deps: [HttpClient]
-        }
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
     })
   ],
   exports: [
     SpasComponent
   ],
   providers: [
-    SpasDataService
+    SpasDataService,
+    AngularFirestore
   ],
   bootstrap: [SpasComponent]
 })
