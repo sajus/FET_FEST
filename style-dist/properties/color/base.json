@@ -2,12 +2,20 @@
   "color": {
     "base": {
       "gray": {
-        "light" : { "value": "#CCCCCC" },
-        "medium": { "value": "#999999" },
+        "light" : { "value": "#cccccc" },
+        "medium": { "value": "#505050" },
         "dark"  : { "value": "#111111" }
       },
-      "red": { "value": "#FF0000" },
-      "green": { "value": "#00FF00" }
+      "red": { "value": "#ff0000" },
+      "green": { "value": "#00ff00" },
+      "white":{ "value": "#ffffff" },
+      "primary": { "value": "#00558c" },
+      "secondary": { "value": "#00b1e2" },
+      "tertiary": { "value": "#21314d"},
+      "success": { "value": "#ccd814"},
+      "warning": { "value": "#eedc00"},
+      "info": { "value": "#ffb81c"},
+      "danger": { "value": "#cd5c3e"}
     }
   }
 }
