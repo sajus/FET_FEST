@@ -1,0 +1,13 @@
+<div class="header-component-container">
+    <div class="header" *ngIf="router.url !== '/login'">
+        <mat-toolbar color="primary" class="example-toolbar">
+          <mat-icon></mat-icon>
+          <mat-icon class="home-user-profile" [matMenuTriggerFor]="menu">account_circle</mat-icon>
+          <mat-menu #menu="matMenu">
+              <button class="profile-menu" mat-menu-item routerLink="/user-profile" (click)="snav.close()">Profile Settings</button>
+              <button mat-menu-item routerLink="/login" (click)="snav.close()">Logout</button>
+          </mat-menu>
+          <mat-icon class="home-icon" routerLink="/home">home</mat-icon>
+        </mat-toolbar>
+      </div>
+</div>
