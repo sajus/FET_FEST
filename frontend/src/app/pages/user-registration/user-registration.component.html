@@ -1,0 +1,71 @@
+
+
+<div class="container page-container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+    <div class="item item-1 " fxFlex="60%">
+        <form class="example-form form-full-width" [formGroup]="userRegisterForm"
+        (ngSubmit)="submit_userRegister(userRegisterForm)">
+        <div class="example-container">
+          <div fxLayout fxLayout.xs="column">
+            <mat-form-field class="example-full-width">
+              <input matInput formControlName="userName" placeholder="Username">
+              <mat-error
+                *ngIf="!userRegisterForm.get('userName').valid  && userRegisterForm.get('userName').touched  ">
+                User name is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div fxLayout fxLayout.xs="column">
+            <mat-form-field class="example-full-width">
+              <input matInput formControlName="mobileNo" type="number" maxlength="10" placeholder="Mobile No.">
+              <mat-error
+                *ngIf="userRegisterForm.get('mobileNo').touched  && userRegisterForm.get('mobileNo').maxlength ">
+                Please enter valid mobile number
+              </mat-error>
+              <mat-error
+                *ngIf="!userRegisterForm.get('mobileNo').valid  && userRegisterForm.get('mobileNo').touched ">
+                Mobile No. is <strong>required</strong>
+              </mat-error>
+              
+            </mat-form-field>
+          </div>
+          <div fxLayout fxLayout.xs="column">
+            <mat-form-field class="example-full-width">
+              <mat-label>Blood Groups</mat-label>
+              <mat-select formControlName="bloodGroup">
+                <mat-option *ngFor="let group of bloodGroups" [value]="group.value">
+                  {{group.viewValue}}
+                </mat-option>
+              </mat-select>
+              <mat-error
+                *ngIf="!userRegisterForm.get('bloodGroup').valid  && userRegisterForm.get('bloodGroup').touched">
+                Blood group is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+           <div fxLayout fxLayout.xs="column">
+            <mat-form-field class="example-full-width">
+              <input matInput formControlName="weight" placeholder="Weight">
+              <mat-error
+                *ngIf="!userRegisterForm.get('weight').valid  && userRegisterForm.get('weight').touched  ">
+               Weight is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+           <div fxLayout fxLayout.xs="column">
+            <mat-form-field class="example-full-width">
+              <input matInput formControlName="age" placeholder="Age">
+              <mat-error
+                *ngIf="!userRegisterForm.get('age').valid  && userRegisterForm.get('age').touched  ">
+                Age is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          
+          <mat-divider class="m-24-0"></mat-divider>
+          <div fxLayout fxLayout.xs="column">
+            <button mat-raised-button color="accent">Next</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>

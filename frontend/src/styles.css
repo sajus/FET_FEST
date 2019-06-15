@@ -1,2 +1,97 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+img {
+    width: 100%;
+    height: auto;
+  }
+
+.example-form {
+    /* min-width: 150px;
+    max-width: 500px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  .full-width{
+    width: 100%;
+  }
+
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+  .p-8{
+      padding: 8px;
+  }
+
+  .m-24-0{
+      margin: 24px 0px !important
+  }
+  .m-0-8{
+    margin: 0px 8px !important
+}
+  .page-container{
+    padding-top: 8%;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Styles */
+    .request-container form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: normal;
+        padding: 20% 5% 0 5%;
+    }
+
+    .request-container form mat-form-field {
+        margin: 0% 0 5% 0;
+    }
+    .page-container{
+        padding: 20% 5% 0 5%;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+    /* Styles */
+    .request-container form {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10%;
+    }
+
+    .request-container form mat-form-field {
+        width: 25%;
+        margin: 0% 0 2% 0;
+    }
+    .page-container{
+        padding-top: 10%;
+    }
+}  
+    
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) {
+    /* Styles */
+    .request-container form {
+        display: grid;
+        padding: 10% 2% 0 2%;
+        grid-gap: 30px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .page-container{
+        padding: 10% 2% 0 2%;
+    }
+}

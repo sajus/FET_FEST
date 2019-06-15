@@ -1,0 +1,30 @@
+<div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+  <div class="item item-1" fxFlex="60%">
+    <form class="example-form form-full-width" [formGroup]="locationRegisterForm"
+      (ngSubmit)="submit_locationRegister(locationRegisterForm)">
+      <div class="example-container">
+        <div fxLayout fxLayout.xs="column">
+          <mat-form-field class="example-full-width">
+            <input matInput formControlName="location" placeholder="Location">
+            <mat-error
+              *ngIf="!locationRegisterForm.get('location').valid && locationRegisterForm.get('location').touched">
+              location is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <mat-divider class="m-24-0"></mat-divider>
+        <div fxLayout fxLayout.xs="column">
+          <mat-card>
+            <img class="app-img imgs" src="../../../assets/img/img-map.png">
+          </mat-card>
+        </div>
+        <mat-divider class="m-24-0"></mat-divider>
+        <a  [routerLink]="" (click)="findMyLocation()"> Find my location</a>
+        <mat-divider class="m-24-0"></mat-divider>
+        <div fxLayout fxLayout.xs="column">
+          <button mat-raised-button color="accent">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
