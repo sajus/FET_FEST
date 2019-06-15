@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Card from './Card'
 
+var cardObj = {
+  "disease": "Lymphoma",
+  "symptoms": {
+    "lesion": false,
+    "fever": true,
+    "welt": false,
+    "transaminitis": false,
+    "decreased body weight": true,
+    "ataxia": false,
+    "superimposition": true,
+  }
+};
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Card key={cardObj} disease={cardObj.disease} symptoms={cardObj.symptoms} />
     </div>
   );
 }
