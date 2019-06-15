@@ -27,7 +27,7 @@ class Autosuggest extends Component {
  onTextChanged = (e) => {
    const myValue = e.target.value;
    if(myValue.length === 0 )
-    this.setState(() => ({suggestions:[],selectedText:""}));
+    this.setState(() => ({suggestions:[],selectText:""}));
     else
     {
       const regex = new RegExp(`^.*${myValue}.*$`,'i');
