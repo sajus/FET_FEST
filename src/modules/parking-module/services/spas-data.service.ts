@@ -15,6 +15,7 @@ export class SpasDataService {
      */
     storeCurrentBookingData(bookingData: BookingData) {
         this.bookingDetails = bookingData;
+        console.log(this.bookingDetails);
     }
 
     /**

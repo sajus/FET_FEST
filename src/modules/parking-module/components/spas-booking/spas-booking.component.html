@@ -11,18 +11,18 @@
       <div class="card-body">
         <h4 class="card-title">User Details</h4>
         <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name"
+          <label for="nam">Name</label>
+          <input type="text" class="form-control" id="nam" placeholder="Enter Name"
             [(ngModel)]="bookingData.username">
         </div>
         <div class="form-group">
           <label for="vehicle">Vehicle No</label>
-          <input type="text" class="form-control" id="vehicle" placeholder="Enter Name" name="vehicle"
-            [(ngModel)]="bookingData.vehicleNumber">
+          <input type="text" class="form-control" id="vehicle" placeholder="Enter Vehicle No."
+            [(ngModel)]="bookingData.vehicleNo">
         </div>
         <div class="form-group">
           <label for="contact">Contact</label>
-          <input type="text" class="form-control" id="contact" placeholder="Enter Name" name="contact"
+          <input type="text" class="form-control" id="contact" placeholder="Enter Contact"
             [(ngModel)]="bookingData.contact">
         </div>
       </div>
@@ -33,23 +33,23 @@
         <h4 class="card-title">Parking Details</h4>
         <div>
           <label>Location :</label>
-          <span [(ngModel)]="bookingData.parkingName">Gold Adlabs, Kalyani Nagar</span>
+          <span>{{bookingData.parkingName}}</span>
         </div>
         <div>
           <label>In Time :</label>
-          <span [(ngModel)]="bookingData.startTime">11.30 AM</span>
+          <span>{{bookingData.startTime}}</span>
         </div>
         <div>
           <label>Out Time :</label>
-          <span [(ngModel)]="bookingData.endTime">1:30 PM</span>
+          <span>{{bookingData.endTime}}</span>
         </div>
         <div>
           <label>Parking Slot :</label>
-          <span [(ngModel)]="bookingData.slotNumber">C3 </span>
+          <span>{{bookingData.slotNumber}}</span>
         </div>
         <div>
-          <label>Fees : Rs. 80</label>
-          <span [(ngModel)]="bookingData.amount"></span>
+          <label>Fees : </label>Rs. 80
+
         </div>
       </div>
     </div>

@@ -9,6 +9,7 @@ import { SpasDataService } from 'src/modules/parking-module/services/spas-data.s
 export class SpasBookingSummaryComponent implements OnInit {
 
   bookingSummary: any;
+  checkoutFlag = false;
 
   constructor(private spasDataService: SpasDataService) {
     this.bookingSummary = spasDataService.getBookingData();
@@ -17,6 +18,10 @@ export class SpasBookingSummaryComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  confirmCheckout() {
+    this.checkoutFlag = true;
   }
 
 }

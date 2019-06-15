@@ -1,58 +1,53 @@
-<h2>Confirmation Summary</h2>
-<hr/>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      User Name: 
-    </div>
-    <div class="col-md-4">
-      {{bookingSummary.username}}
+<div class="container-fluid receipt-container">
+  <div class="row m-0 receipt-header">
+    <div>
+      <img src="../../assets/img/circled-left-arrow.png">
+      <h5>Parking Receipt</h5>
     </div>
   </div>
+  <hr>
+  <div class="receipt-body">
+    <div class="card bg-light">
+      <div class="card-body">
+        <h4 class="card-title">Parking Details</h4>
+        <div>
+          <label>Name :</label>
+          <span>{{bookingSummary.username}}</span>
+        </div>
+        <div>
+          <label>Vehicle No. :</label>
+          <span>{{bookingSummary.vehicleNo}}</span>
+        </div>
+        <div>
+          <div>
+            <label>Parking Slot :</label>
+            <span>{{bookingSummary.slotNumber}} </span>
+          </div>
+          <label>In Time :</label>
+          <span>{{bookingSummary.startTime}}</span>
+        </div>
+        <div>
+          <label>Out Time :</label>
+          <span>{{bookingSummary.endTime}}</span>
+        </div>
+        <div>
+          <label>Booking Status :</label>
+          <span>{{bookingSummary.status}}</span>
+        </div>
+        <hr />
 
-  <div class="row">
-    <div class="col-md-4">
-      Slot details:
-    </div>
-    <div class="col-md-4">
-      {{bookingSummary.slotNumber}}
-    </div>
-  </div>
+        <button class="btn btn-light checkout-btn" (click)="confirmCheckout()" data-toggle="collapse"
+          data-target="#demo">Ready to Check Out</button>
 
-  <div class="row">
-    <div class="col-md-4">
-      Vehicle Number: 
-    </div>
-    <div class="col-md-4">
-      {{bookingSummary.vehicleNo}}
-    </div>
-  </div>
+        <div *ngIf="checkoutFlag">
+          <div>
+            <p>No Pending Dues</p>
+            <h6>Thanks.. Visit Again</h6>
+          </div>
+        </div>
+      </div>
 
-  <div class="row">
-    <div class="col-md-4">
-      In Time:
     </div>
-    <div class="col-md-4">
-      {{bookingSummary.startTime}}
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-4">
-      Out Time:
-    </div>
-    <div class="col-md-4">
-      {{bookingSummary.endTime}}
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-4">
-      Booking Status:
-    </div>
-    <div class="col-md-4">
-      {{bookingSummary.status}}
-    </div>
+    <button type="button" routerLink="" class="btn btn-light proceed-btn">Exit</button>
   </div>
 </div>

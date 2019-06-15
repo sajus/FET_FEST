@@ -3,7 +3,8 @@
     background-color: $white;
     height: 100vh;
     .select-slot-header {
-      height: 80px;
+      height: 90px;
+      padding-top: 10px;
       margin-bottom: 15px !important;
       .page-title {
         width: 100%;
@@ -74,6 +75,7 @@
         }
         .parked {
           background: $red !important;
+          // background: url("../../../../assets/img/imgpsh_fullsize_anim (1).png") 50% 50% no-repeat;
         }
         .available {
           background: $blue-0 !important;
