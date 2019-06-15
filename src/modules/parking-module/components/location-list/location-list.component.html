@@ -8,11 +8,12 @@
   <hr>
   <div class="available-locations-body">
       <div class="btn-grp row">
-          <button type="button" class="btn btn-light col-6">Location 1</button>
-          <button type="button" class="btn btn-light col-6">Location 2</button>
-          <button type="button" class="btn btn-light col-6">Location 3</button>
-          <button type="button" class="btn btn-light col-6">Location 4</button>
+          <ng-container *ngFor="let location of locationList; index as i;" >
+                <button (click)="viewLocationSlots(location)"  type="button" class="btn btn-light col-6">
+                        <span >{{location.name}}</span>
+                      </button>
+          </ng-container>
+          
       </div>
-      <button type="button" class="btn btn-light select-location-btn">Select and Continue</button>
   </div>
 </div>

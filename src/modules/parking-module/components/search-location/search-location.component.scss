@@ -75,3 +75,9 @@
       }
     }
   }
+
+  .form-control {
+    &.has-error {
+      border: 1px solid red;
+    }
+  }
