@@ -1,0 +1,44 @@
+.row {
+  display: flex;
+}
+
+.card {
+  margin: 0 auto;
+}
+
+.disease-title {
+  color: #444;
+}
+
+.material-icons {
+  font-size: 2rem;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+span {
+  font-size: 1rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.symptom {
+  padding: 5px 5px 5px 0;
+  margin: 5px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 50px;
+}
+
+i, .symptom-value {
+  margin: 0 2px;
+}
+
+.selected {
+  background: #baddfa;
+}
+
+.unselected {
+  background: #ddd;
+}
