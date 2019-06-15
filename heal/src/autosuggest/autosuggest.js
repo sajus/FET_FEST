@@ -6,22 +6,16 @@ class Autosuggest extends Component {
    super(props);
 
    this.items = [];
-   //this.items = ["pain","pain in d ass","no pain no gain","painkiller","joint pain"];
     this.state = {
         suggestions: [],
+        selectText:"",
     };
  }
 
- componentDidMount = () => {
-   /*fetch('https://api.myjson.com/bins/k8xr5').then(res => res.json).then( data => {
-     this.items.push(data.symptoms);
-     console.log(this.items);
-    });*/
-   
+ componentDidMount = () => {  
    fetch('https://api.myjson.com/bins/k8xr5')
   .then(response => response.json())
   .then(myJson => {
-    // console.log(JSON.stringify(myJson.symptoms));
      console.log(myJson.symptoms);
     this.items.push(myJson.symptoms);
     
@@ -31,38 +25,37 @@ class Autosuggest extends Component {
  
 
  onTextChanged = (e) => {
-   const value = e.target.value;
-   if(value.length === 0 )
-    this.setState(() => ({suggestions:[]}));
+   const myValue = e.target.value;
+   if(myValue.length === 0 )
+    this.setState(() => ({suggestions:[],selectedText:""}));
     else
     {
-      const regex = new RegExp(`^.*${value}.*$`,'i');
-      const suggestions = this.items[0].sort().filter( (v) => regex.test(v));
-      this.setState(() => ({"suggestions": suggestions }));
+      const regex = new RegExp(`^.*${myValue}.*$`,'i');
+      const myArray = this.items[0].sort().filter( (v) => regex.test(v));
+      var suggestions = myArray.filter((v, i, a) => a.indexOf(v) === i);
+      this.setState(() => ({"suggestions": suggestions, selectText:myValue }));
     }
  }
+
+ suggestionSelected (selectedVal){
+   this.setState(() => ({text:selectedVal, suggestions: [],}))
+ }
+
 
  renderSuggestions(){
     const suggestions = this.state.suggestions;
-    let list;
-    // console.log(suggestions)
     if( suggestions.length === 0 )
       return null;
-    else {
-      let array = [];
-      // list = suggestions.map((items) => items);
-      // console.log(list);
-      for (let i = 0; i < suggestions.length; i++) {
-        array.push(<p key={i}>{suggestions[i]}</p>);
-      }
-
-      console.log(array);
-      return <p>{array}</p>
-    }
+   return(
+     <div>
+       {suggestions.map((item) => <p onClick={() => this.suggestionSelected(item)}>{item}</p>)}
+     </div>
+   )
  }
   render() {
+    const { selectText } = this.state;
     return <div>
-        <input type="text" onChange={this.onTextChanged} />
+        <input type="text" onChange={this.onTextChanged} value={selectText}/>
         <div>
           {this.renderSuggestions()}
         </div>
