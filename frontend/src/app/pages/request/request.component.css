@@ -1,0 +1,47 @@
+.request-container form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Styles */
+    .request-container form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: normal;
+        padding: 20% 5% 0 5%;
+    }
+
+    .request-container form mat-form-field {
+        margin: 0% 0 5% 0;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+    /* Styles */
+    .request-container form {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10%;
+    }
+
+    .request-container form mat-form-field {
+        width: 25%;
+        margin: 0% 0 2% 0;
+    }
+}  
+    
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) {
+    /* Styles */
+    .request-container form {
+        display: grid;
+        padding: 10% 2% 0 2%;
+        grid-gap: 30px;
+        grid-template-columns: 1fr 1fr;
+    }
+}

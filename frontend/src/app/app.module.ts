@@ -9,14 +9,18 @@ import { MaterialModule } from './material-module';
 
 // Pages
 import { AppComponent } from './app.component';
+import { RequestComponent } from './pages/request';
 
 // Components
+import { FileUploadComponent } from './components/file-upload';
 import { HeaderComponent } from './components/header';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    FileUploadComponent,
+    HeaderComponent,
+    RequestComponent
   ],
   imports: [
     BrowserModule,

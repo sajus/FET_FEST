@@ -1,0 +1,30 @@
+<div class="request-container">
+    <form [formGroup]="requestForm" (ngSubmit)="saveRequest(requestForm.value)">
+      <mat-form-field>
+        <mat-label>Select Blood Group</mat-label>
+        <mat-select formControlName="fcBloodGroup">
+          <mat-option *ngFor="let bg of BloodGroup" [value]="bg">
+            {{bg}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Address" formControlName="fcAddress"></textarea>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Select Range</mat-label>
+        <mat-select formControlName="fcRanges">
+          <mat-option *ngFor="let range of Ranges" [value]="range">
+            {{range}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <app-file-upload (complete)="onFileComplete($event)"></app-file-upload>
+      <br>
+
+      <button mat-fab color="primary" type="submit" [disabled]="!requestForm.valid || !uploadData">Save</button>
+    </form>
+</div>
