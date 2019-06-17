@@ -1,0 +1,58 @@
+<div class="container-fluid checkin-container">
+  <div class="row m-0 checkin-header">
+    <div>
+      <img src="../../assets/img/circled-left-arrow.png">
+      <h5>Check In Details</h5>
+    </div>
+  </div>
+  <hr>
+  <div class="checkin-body">
+    <div class="card bg-light">
+      <div class="card-body">
+        <h4 class="card-title">User Details</h4>
+        <div class="form-group">
+          <label for="nam">Name</label>
+          <input type="text" class="form-control" id="nam" placeholder="Enter Name"
+            [(ngModel)]="bookingData.username">
+        </div>
+        <div class="form-group">
+          <label for="vehicle">Vehicle No</label>
+          <input type="text" class="form-control" id="vehicle" placeholder="Enter Vehicle No."
+            [(ngModel)]="bookingData.vehicleNo">
+        </div>
+        <div class="form-group">
+          <label for="contact">Contact</label>
+          <input type="text" class="form-control" id="contact" placeholder="Enter Contact"
+            [(ngModel)]="bookingData.contact">
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="card bg-light">
+      <div class="card-body">
+        <h4 class="card-title">Parking Details</h4>
+        <div>
+          <label>Location :</label>
+          <span>{{bookingData.parkingName}}</span>
+        </div>
+        <div>
+          <label>In Time :</label>
+          <span>{{bookingData.startTime}}</span>
+        </div>
+        <div>
+          <label>Out Time :</label>
+          <span>{{bookingData.endTime}}</span>
+        </div>
+        <div>
+          <label>Parking Slot :</label>
+          <span>{{bookingData.slotNumber}}</span>
+        </div>
+        <div>
+          <label>Fees : </label>Rs. 80
+
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-light proceed-btn" (click)="payNProceed()">Pay and Proceed</button>
+  </div>
+</div>

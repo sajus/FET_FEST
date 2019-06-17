@@ -1,0 +1,53 @@
+<div class="container-fluid receipt-container">
+  <div class="row m-0 receipt-header">
+    <div>
+      <img src="../../assets/img/circled-left-arrow.png">
+      <h5>Parking Receipt</h5>
+    </div>
+  </div>
+  <hr>
+  <div class="receipt-body">
+    <div class="card bg-light">
+      <div class="card-body">
+        <h4 class="card-title">Parking Details</h4>
+        <div>
+          <label>Name :</label>
+          <span>{{bookingSummary.username}}</span>
+        </div>
+        <div>
+          <label>Vehicle No. :</label>
+          <span>{{bookingSummary.vehicleNo}}</span>
+        </div>
+        <div>
+          <div>
+            <label>Parking Slot :</label>
+            <span>{{bookingSummary.slotNumber}} </span>
+          </div>
+          <label>In Time :</label>
+          <span>{{bookingSummary.startTime}}</span>
+        </div>
+        <div>
+          <label>Out Time :</label>
+          <span>{{bookingSummary.endTime}}</span>
+        </div>
+        <div>
+          <label>Booking Status :</label>
+          <span>{{bookingSummary.status}}</span>
+        </div>
+        <hr />
+
+        <button class="btn btn-light checkout-btn" (click)="confirmCheckout()" data-toggle="collapse"
+          data-target="#demo">Ready to Check Out</button>
+
+        <div *ngIf="checkoutFlag">
+          <div>
+            <p>No Pending Dues</p>
+            <h6>Thanks.. Visit Again</h6>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <button type="button" routerLink="" class="btn btn-light proceed-btn">Exit</button>
+  </div>
+</div>

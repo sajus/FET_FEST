@@ -1,0 +1,84 @@
+@import "../../../../assets/scss/variable.scss";
+
+.where-to-container {
+    background-color: #ffc306;
+    height: 100vh;
+    .where-to-header {
+      height: 50px;
+      padding-top: 10px;
+      .my-bookings-btn {
+        background-color: rgba(215, 40, 40, 0.7);
+        background: rgba(215, 40, 40, 0.7);
+        color: #fff;
+        font-weight: 500;
+        position: absolute;
+        right: 15px;
+      }
+      img {
+        height: 50px;
+        width: 50px;
+      }
+      h5 {
+        color: #3f51b5;
+        display: inline-block;
+        vertical-align: -webkit-baseline-middle;
+      }
+    }
+    .where-to-body {
+      label {
+        position: relative;
+        width: 100%;
+      }
+  
+      label.location:before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 24px;
+        bottom: 0;
+        width: 20px;
+        background: url("../../../../assets/img/marker.png") 50% 50% no-repeat;
+      }
+      label.start-time:before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 24px;
+        bottom: 0;
+        width: 30px;
+        background: url("../../../../assets/img/time-machine.png") 50% 50% no-repeat;
+      }
+  
+      label.duration:before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 24px;
+        bottom: 0;
+        width: 30px;
+        background: url("../../../../assets/img/hourglass-sand-bottom.png") 50% 50% no-repeat;
+      }
+  
+      input {
+        padding: 10px 40px;
+      }
+  
+      .my-bookings-btn {
+        background-color: #3F51B5;
+        color: #fff;
+        font-weight: 500;
+        position: absolute;
+        margin: 0 auto;
+        right:0;
+        left: 0;
+        width: fit-content;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .form-control {
+    &.has-error {
+      border: 1px solid red;
+    }
+  }

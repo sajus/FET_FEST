@@ -1,0 +1,99 @@
+@import "../../../../assets/scss/variable.scss";
+.select-slot-container {
+    background-color: $white;
+    height: 100vh;
+    .select-slot-header {
+      height: 90px;
+      padding-top: 10px;
+      margin-bottom: 15px !important;
+      .page-title {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+  
+      img {
+        height: 50px;
+        width: 50px;
+      }
+      h5 {
+        color: #3f51b5;
+        display: inline-block;
+        vertical-align: -webkit-baseline-middle;
+      }
+  
+      .circle-blue {
+        border-radius: 15px;
+        height: 15px;
+        width: 15px;
+        background: $blue-0;
+        display: inline-block;
+      }
+      .circle-red {
+        border-radius: 15px;
+        height: 15px;
+        width: 15px;
+        background: $red;
+        display: inline-block;
+      }
+      .circle-green {
+        border-radius: 15px;
+        height: 15px;
+        width: 15px;
+        background: $green;
+        display: inline-block;
+      }
+      p {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 10px;
+      }
+    }
+    .select-slot-body {
+      .parking-block {
+        background: dimgray;
+        padding: 30px;
+        .slot {
+          background: $blue-0;
+          filter: alpha(opacity=50);
+          border: 1px dashed rgba(86, 61, 124, 0.2);
+          min-height: 50px;
+          transform: skew(0deg);
+          padding: 0;
+          div {
+            background: $blue-0;
+            min-height: 50px;
+            width: 100%;
+            border: 2px dashed white;
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            box-sizing: border-box;
+            &:first-child {
+              border-top:2px dashed white;
+            }
+          }
+        }
+        .parked {
+          background: $red !important;
+          // background: url("../../../../assets/img/imgpsh_fullsize_anim (1).png") 50% 50% no-repeat;
+        }
+        .available {
+          background: $blue-0 !important;
+        }
+        .selected {
+          background: $green !important;
+        }
+      }
+      .select-location-btn {
+        background-color: rgba(215, 40, 40, 0.7);
+        color: #fff;
+        font-weight: 500;
+        position: absolute;
+        margin: 30px auto;
+        right: 0;
+        left: 0;
+        width: fit-content;
+        margin-bottom: 30px;
+      }
+    }
+  }
